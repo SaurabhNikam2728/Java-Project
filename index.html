@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="5"/> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        fieldset {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="button"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        #cart {
+            display: block;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #007bff;
+            text-align: center;
+        }
+
+        .btn-group {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="data.js">
+    </script>
+ <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <h1>Shopping Cart</h1>
+            <fieldset>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td>Product ID:</td>
+                            <td><input type="text" class="form-control" name="pid" id="pid"></td>
+                        </tr>
+                        <tr>
+                            <td>Product Name:</td>
+                            <td><input type="text" class="form-control" name="pname" id="pname"></td>
+                        </tr>
+                        <tr>
+                            <td>Product Quantity:</td>
+                            <td><input type="text" class="form-control" name="qty" id="qty"></td>
+                        </tr>
+                        <tr>
+                            <td>Product Price:</td>
+                            <td><input type="text" class="form-control" name="price" id="price"></td>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="btn-group">
+                                    <input type="button" class="btn btn-primary" name="btn" id="add" onclick="addProduct()" value="Add Product">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    <input type="button" class="btn btn-success" name="btn" id="update" onclick="updateProduct()" value="Update Product">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    <input type="button" class="btn btn-danger" name="btn" id="remove" onclick="removeProduct()" value="Remove Product">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    <input type="button" class="btn btn-info" name="btn" id="show" onclick="showProducts()" value="Show Product">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" class="form-control" name="search" id="search" size="120">
+                            <td colspan="2">
+                                <input type="button" class="btn btn-warning" name="btn" id="srch" onclick="searchProduct()" value="Search"></td>
+                            </td>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="cart"></div>
+            </fieldset>
+
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="data.js"></script>
+
+</body>
+
+</center>
+</body>
+</html>
